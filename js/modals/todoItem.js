@@ -1,7 +1,9 @@
 let TodoItem = Backbone.Model.extend({
   defaults: { 
-    isCompleted: false 
+    isCompleted: false,
 },
+
+url : "testing URL",
   validate: function (attrs) {
     if (!attrs.description) {
       return "Description is required.";

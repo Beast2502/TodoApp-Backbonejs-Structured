@@ -4,6 +4,10 @@ body{
 
 body , p{font-size: 24px;}
 
+li{
+   list-style-type: none;
+}
+
 #todoItems li.completed {
     text-decoration: line-through;
 }

@@ -6,7 +6,13 @@ let TodoItemsView = Backbone.View.extend({
         if(!options && options.model){
             throw new Error('model isnot working');
         }
-        this.model.on('add', this.onAddTodoItem , this)
+        this.model.on('add', this.onAddTodoItem , this);
+        this.model.on('remove', this.onRemoveTodoItem , this);
+
+    },
+    onRemoveTodoItem : function(todoItem){
+            console.log('Remove ' , todoItem);
+            this.$("li#" + todoItem.id).remove();
     },
     onAddTodoItem : function(todoItem){
         console.log('Added');
